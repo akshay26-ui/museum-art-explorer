@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museum Art Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="inner">
+      <h1 class="logo">🏛️ Museum Art Explorer</h1>
+      <p class="tagline">Metropolitan Museum of Art — Open Collection</p>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="search">
+      <input type="text" id="query" placeholder="Search artworks, artists, mediums..." />
+      <button id="btn">Search</button>
+    </div>
+
+    <div class="filters">
+      <select id="dept">
+        <option value="">All Departments</option>
+        <option value="9">Egyptian Art</option>
+        <option value="10">European Paintings</option>
+        <option value="19">Modern Art</option>
+        <option value="12">Greek and Roman Art</option>
+        <option value="6">Asian Art</option>
+        <option value="8">Drawings and Prints</option>
+        <option value="11">European Sculpture</option>
+        <option value="18">Photographs</option>
+        <option value="4">Arms and Armor</option>
+        <option value="13">Islamic Art</option>
+        <option value="16">Medieval Art</option>
+        <option value="17">Musical Instruments</option>
+        <option value="1">American Decorative Arts</option>
+      </select>
+
+      <select id="sort">
+        <option value="">Sort: Default</option>
+        <option value="az">Title A → Z</option>
+        <option value="za">Title Z → A</option>
+        <option value="old">Oldest First</option>
+        <option value="new">Newest First</option>
+      </select>
+    </div>
+
+    <p id="count" class="count"></p>
+
+    <div id="loader" class="loader">
+      <div class="spin"></div>
+      <p>Loading artworks...</p>
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <div id="grid" class="grid"></div>
+
+    <div id="pages" class="pages"></div>
+
+  </main>
+
+  <footer>
+    <p>Data from the <a href="https://metmuseum.github.io/" target="_blank">Met Museum Open API</a> — free &amp; open access</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
