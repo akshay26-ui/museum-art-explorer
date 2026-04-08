@@ -14,6 +14,11 @@ const loader = document.getElementById("loader");
 const error  = document.getElementById("error");
 const count  = document.getElementById("count");
 const pages  = document.getElementById("pages");
+const detail = document.getElementById("detail");
+const panel  = detail.querySelector(".panel");
+const detailContent = detail.querySelector(".content");
+const closeBtn = detail.querySelector(".close");
+const overlay = detail.querySelector(".overlay");
 
 async function search() {
   const q = input.value.trim() || "painting";
@@ -129,9 +134,12 @@ function makeCard(a) {
     </div>
   `;
 
-  body.querySelector(".fav").addEventListener("click", function () {
+  body.querySelector(".fav").addEventListener("click", function (e) {
+    e.stopPropagation();
     toggleFav(a.objectID, this);
   });
+
+  card.addEventListener("click", () => showDetail(a.objectID));
 
   card.appendChild(wrap);
   card.appendChild(body);
@@ -184,5 +192,39 @@ input.addEventListener("keydown", e => {
 btn.addEventListener("click", search);
 dept.addEventListener("change", search);
 sort.addEventListener("change", () => { if (ids.length) { page = 1; loadPage(); } });
+
+async function showDetail(id) {
+  detail.classList.add("active");
+  detailContent.innerHTML = `<div class="loader"><div class="spin"></div><p>Loading details...</p></div>`;
+  
+  try {
+    const res = await fetch(`${API}/objects/${id}`);
+    const a = await res.json();
+    
+    detailContent.innerHTML = `
+      ${a.primaryImage ? `<img src="${a.primaryImage}" alt="${a.title}" class="big" />` : ''}
+      <h2>${a.title || "Untitled"}</h2>
+      <p class="artist">${a.artistDisplayName || "Unknown Artist"}</p>
+      <p class="date">${a.objectDate || "Date unknown"}</p>
+      
+      ${a.department ? `<div class="field"><div class="label">Department</div><div class="value">${a.department}</div></div>` : ''}
+      ${a.culture ? `<div class="field"><div class="label">Culture</div><div class="value">${a.culture}</div></div>` : ''}
+      ${a.period ? `<div class="field"><div class="label">Period</div><div class="value">${a.period}</div></div>` : ''}
+      ${a.medium ? `<div class="field"><div class="label">Medium</div><div class="value">${a.medium}</div></div>` : ''}
+      ${a.dimensions ? `<div class="field"><div class="label">Dimensions</div><div class="value">${a.dimensions}</div></div>` : ''}
+      ${a.creditLine ? `<div class="field"><div class="label">Credit</div><div class="value">${a.creditLine}</div></div>` : ''}
+      ${a.objectURL ? `<a href="${a.objectURL}" target="_blank" class="link">View on Met Museum →</a>` : ''}
+    `;
+  } catch (e) {
+    detailContent.innerHTML = `<p class="error">Failed to load artwork details.</p>`;
+  }
+}
+
+function hideDetail() {
+  detail.classList.remove("active");
+}
+
+closeBtn.addEventListener("click", hideDetail);
+overlay.addEventListener("click", hideDetail);
 
 search();

@@ -33,7 +33,7 @@
 ![API](https://img.shields.io/badge/Met_Museum_API-9b1c1c?style=for-the-badge&logoColor=white)
 
 ![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
-![Milestone](https://img.shields.io/badge/Milestone-2_Complete-blue?style=flat-square)
+![Milestone](https://img.shields.io/badge/Milestone-3_Complete-blue?style=flat-square)
 ![API Key](https://img.shields.io/badge/API_Key-Not_Required-brightgreen?style=flat-square)
 ![Artworks](https://img.shields.io/badge/Artworks-470K+-red?style=flat-square)
 
@@ -66,48 +66,40 @@
  ║                  ║     ║                  ║     ║                  ║     ║                  ║
  ║  📅 23 Mar       ║     ║  📅 1 Apr         ║     ║  📅 8 Apr        ║     ║  📅 10 Apr       ║
  ╚══════════════════╝     ╚══════════════════╝     ╚══════════════════╝     ╚══════════════════╝
-        ✅ DONE                  ✅ DONE                ⏳ UPCOMING              ⏳ UPCOMING
+        ✅ DONE                  ✅ DONE                  ✅ DONE                ⏳ UPCOMING
 ```
 
 ---
 
 <div align="center">
 
-## 🌐 Milestone 2 — What Was Built
+## ⚙️ Milestone 3 — What Was Built
 
 </div>
 
-This milestone connected the app to the real Met Museum API and made real artworks appear on screen for the first time.
+This milestone added all interactive features to make the app fully functional.
 
 ```
-  You type "sunflower"
-         │
-         ▼
-  ┌──────────────────────────────────────────────────────────┐
-  │  Ask the museum — GET /search?q=sunflower&hasImages=true │
-  │  Museum responds → list of matching artwork IDs          │
-  └──────────────────────────────┬───────────────────────────┘
-                                 │  42 matches found
-                                 ▼
-         ┌──────────────────────────────────────────────────┐
-         │  Fetch 12 artwork details at once                │
-         │  GET /objects/436524  →  title, artist, image    │
-         │  GET /objects/12345   →  title, artist, image    │
-         │  ...× 12                                         │
-         └──────────────────────────────┬───────────────────┘
-                                        ▼
-                          🖼️  Cards appear on screen
+  ┌─────────────────────────────────────────────────────────────┐
+  │  🔍  SEARCH        Type "sunflower" → instant results       │
+  │  🏛️  FILTER        Egyptian Art, Modern Art, Asian Art...   │
+  │  ↕️  SORT          A→Z, Z→A, Oldest→Newest                  │
+  │  ❤️  FAVORITES     Click heart → save to localStorage       │
+  │  📄  PAGINATION    12 artworks per page, smooth navigation  │
+  │  ⚡  DEBOUNCED      Smart search waits for you to finish     │
+  └─────────────────────────────────────────────────────────────┘
 ```
 
-### ✅ Milestone 2 Checklist
+### ✅ Milestone 3 Checklist
 
 | Task | Status |
 |------|--------|
-| Connect to Met Museum API using `fetch` | ✅ Done |
-| Display real artwork cards on the page | ✅ Done |
-| Show a loading spinner while data loads | ✅ Done |
-| Handle errors gracefully | ✅ Done |
-| Fully responsive — mobile, tablet, desktop | ✅ Done |
+| Search functionality with debouncing | ✅ Done |
+| Department filter with 13 categories | ✅ Done |
+| Sort by title (A-Z, Z-A) and year (oldest/newest) | ✅ Done |
+| Favorite system with localStorage persistence | ✅ Done |
+| Pagination with 12 artworks per page | ✅ Done |
+| Responsive design across all devices | ✅ Done |
 
 ---
 
@@ -126,7 +118,7 @@ This milestone connected the app to the real Met Museum API and made real artwor
 │   ❤️  FAVORITES     →   Save the artworks you love, they stay saved     │
 │   📄  PAGINATION    →   Explore results 12 at a time, page by page      │
 │   ⚡  SMART SEARCH  →   Waits for you to stop typing before searching    │ 
-│   💾  REMEMBERS YOU →   Your saved artworks stay between visits         │
+│   💾  REMEMBERS YOU →   Your saved artworks stay between visits         │ 
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -144,14 +136,14 @@ museum-art-explorer/
 │
 ├── 📄  index.html      ← Page layout — header, search, grid, pagination
 │
-├── 🎨  style.css       ← All styles
+├── 🎨  style.css       ← All styles — simplified and optimized
 │       ├── Sticky header
 │       ├── Search bar + filters
 │       ├── Responsive art grid
 │       ├── Artwork cards with hover effect
 │       └── Loading spinner + error message
 │
-├── ⚙️   app.js         ← All logic
+├── ⚙️   script.js      ← All logic
 │       ├── search()      fetch artwork IDs from API
 │       ├── loadPage()    fetch and display 12 artworks
 │       ├── sortList()    sort results using .sort()
@@ -250,7 +242,7 @@ open index.html
 |---|-----------|----------------|----------|--------|
 | 1 | 🏗️ Project Setup | GitHub repo + README | 23 Mar | ✅ Done |
 | 2 | 🌐 Connect the API | Real artworks shown on screen | 1 Apr | ✅ Done |
-| 3 | ⚙️ Make it Interactive | Search, filter, sort, favorites | 8 Apr | ⏳ Upcoming |
+| 3 | ⚙️ Make it Interactive | Search, filter, sort, favorites | 8 Apr | ✅ Done |
 | 4 | 🚀 Ship it Live | Deployed + fully documented | 10 Apr | ⏳ Upcoming |
 
 ---

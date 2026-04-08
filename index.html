@@ -12,15 +12,15 @@
 
   <header>
     <div class="inner">
-      <h1 class="logo">🏛️ Museum Art Explorer</h1>
-      <p class="tagline">Metropolitan Museum of Art — Open Collection</p>
+      <h1 class="logo">Museum Art Explorer</h1>
+      <p class="tagline">Metropolitan Museum of Art - <span style="font-weight: bolder;">New York</span></p>
     </div>
   </header>
 
   <main>
 
     <div class="search">
-      <input type="text" id="query" placeholder="Search artworks, artists, mediums..." />
+      <input type="text" id="query" placeholder="   Search Masterpieces...." />
       <button id="btn">Search</button>
     </div>
 
@@ -44,8 +44,8 @@
 
       <select id="sort">
         <option value="">Sort: Default</option>
-        <option value="az">Title A → Z</option>
-        <option value="za">Title Z → A</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
         <option value="old">Oldest First</option>
         <option value="new">Newest First</option>
       </select>
@@ -67,8 +67,16 @@
   </main>
 
   <footer>
-    <p>Data from the <a href="https://metmuseum.github.io/" target="_blank">Met Museum Open API</a> — free &amp; open access</p>
+    <p style="font-weight: bolder; font-size: 13px;">Built with ❤️ for WAP by AKS</p>
   </footer>
+
+  <div id="detail" class="detail">
+    <div class="overlay"></div>
+    <div class="panel">
+      <button class="close">✕</button>
+      <div class="content"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
