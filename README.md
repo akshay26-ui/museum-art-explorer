@@ -32,8 +32,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![API](https://img.shields.io/badge/Met_Museum_API-9b1c1c?style=for-the-badge&logoColor=white)
 
-![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
-![Milestone](https://img.shields.io/badge/Milestone-3_Complete-blue?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Live-success?style=flat-square)
+![Milestone](https://img.shields.io/badge/Milestone-4_Complete-blue?style=flat-square)
 ![API Key](https://img.shields.io/badge/API_Key-Not_Required-brightgreen?style=flat-square)
 ![Artworks](https://img.shields.io/badge/Artworks-470K+-red?style=flat-square)
 
@@ -64,42 +64,40 @@
  ║  🏗️  Setup &     ║     ║  🌐 Connect to    ║     ║  ⚙️  Make it     ║     ║  🚀 Ship it      ║
  ║     Structure    ║     ║     the API      ║     ║     interactive  ║     ║     live         ║
  ║                  ║     ║                  ║     ║                  ║     ║                  ║
- ║  📅 23 Mar       ║     ║  📅 1 Apr         ║     ║  📅 8 Apr        ║     ║  📅 10 Apr       ║
+ ║  📅 23 Mar       ║     ║  📅 1 Apr         ║     ║  📅 8 Apr        ║     ║  📅 12 Apr       ║
  ╚══════════════════╝     ╚══════════════════╝     ╚══════════════════╝     ╚══════════════════╝
-        ✅ DONE                  ✅ DONE                  ✅ DONE                ⏳ UPCOMING
+        ✅ DONE                  ✅ DONE                  ✅ DONE                  ✅ DONE
 ```
 
 ---
 
 <div align="center">
 
-## ⚙️ Milestone 3 — What Was Built
+## 🚀 Milestone 4 — What Was Built
 
 </div>
 
-This milestone added all interactive features to make the app fully functional.
+This milestone deployed the app live and added a detailed artwork view feature.
 
 ```
   ┌─────────────────────────────────────────────────────────────┐
-  │  🔍  SEARCH        Type "sunflower" → instant results       │
-  │  🏛️  FILTER        Egyptian Art, Modern Art, Asian Art...   │
-  │  ↕️  SORT          A→Z, Z→A, Oldest→Newest                  │
-  │  ❤️  FAVORITES     Click heart → save to localStorage       │
-  │  📄  PAGINATION    12 artworks per page, smooth navigation  │
-  │  ⚡  DEBOUNCED      Smart search waits for you to finish     │
+  │  🌍  DEPLOYED      Live on Vercel — accessible worldwide    │
+  │  🖼️  DETAIL VIEW   Click any artwork → see full details     │
+  │  📱  RESPONSIVE    Works perfectly on phone, tablet, desktop│
+  │  ✨  POLISHED      Production-ready with smooth animations  │
   └─────────────────────────────────────────────────────────────┘
 ```
 
-### ✅ Milestone 3 Checklist
+### ✅ Milestone 4 Checklist
 
 | Task | Status |
 |------|--------|
-| Search functionality with debouncing | ✅ Done |
-| Department filter with 13 categories | ✅ Done |
-| Sort by title (A-Z, Z-A) and year (oldest/newest) | ✅ Done |
-| Favorite system with localStorage persistence | ✅ Done |
-| Pagination with 12 artworks per page | ✅ Done |
-| Responsive design across all devices | ✅ Done |
+| Deploy to Vercel and make live | ✅ Done |
+| Add detailed artwork view panel | ✅ Done |
+| Show high-res images and full metadata | ✅ Done |
+| Link to official Met Museum page | ✅ Done |
+| Final testing across devices | ✅ Done |
+| Complete documentation | ✅ Done |
 
 ---
 
@@ -117,8 +115,9 @@ This milestone added all interactive features to make the app fully functional.
 │   ↕️  SORT          →   Arrange by title or year, oldest to newest      │
 │   ❤️  FAVORITES     →   Save the artworks you love, they stay saved     │
 │   📄  PAGINATION    →   Explore results 12 at a time, page by page      │
+│   🖼️  DETAIL VIEW   →   Click any artwork to see full details & images  │
 │   ⚡  SMART SEARCH  →   Waits for you to stop typing before searching    │ 
-│   💾  REMEMBERS YOU →   Your saved artworks stay between visits         │ 
+│   💾  REMEMBERS YOU →   Your saved artworks stay between visits         │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -188,7 +187,7 @@ museum-art-explorer/
 ║                                                    ║
 ║   DEPLOYMENT                                       ║
 ║   ─────────────────────────────────────────────    ║
-║   ▸ GitHub Pages     Free, live on the internet    ║
+║   ▸ Vercel           Free, live on the internet    ║
 ║                                                    ║
 ╚════════════════════════════════════════════════════╝
 ```
@@ -201,6 +200,12 @@ museum-art-explorer/
 
 </div>
 
+**Option 1: Visit the Live Demo** *(Easiest)*
+```
+Just open: https://museum-art-explorer-gamma.vercel.app/
+```
+
+**Option 2: Run Locally**
 ```bash
 # 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/museum-art-explorer.git
@@ -224,9 +229,9 @@ open index.html
 
 <div align="center">
 
-**🔗 [View Live App](https://YOUR_USERNAME.github.io/museum-art-explorer)**
+**🔗 [View Live App](https://museum-art-explorer-gamma.vercel.app/)**
 
-*Deployed via GitHub Pages*
+*Deployed via Vercel*
 
 </div>
 
@@ -243,7 +248,7 @@ open index.html
 | 1 | 🏗️ Project Setup | GitHub repo + README | 23 Mar | ✅ Done |
 | 2 | 🌐 Connect the API | Real artworks shown on screen | 1 Apr | ✅ Done |
 | 3 | ⚙️ Make it Interactive | Search, filter, sort, favorites | 8 Apr | ✅ Done |
-| 4 | 🚀 Ship it Live | Deployed + fully documented | 10 Apr | ⏳ Upcoming |
+| 4 | 🚀 Ship it Live | Deployed + fully documented | 12 Apr | ✅ Done |
 
 ---
 

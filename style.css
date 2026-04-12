@@ -20,13 +20,16 @@ header {
   box-shadow: 0 1px 6px rgba(0,0,0,0.06);
 }
 
-.inner, main {
+.inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
+  position: relative;
 }
 
 main {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 32px 24px 60px;
 }
 
@@ -44,6 +47,30 @@ main {
   letter-spacing: 0.04em;
   margin-top: 2px;
   text-align: center;
+}
+
+.favBtn {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  padding: 8px 16px;
+  background: darkred;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.favBtn:hover {
+  background: maroon;
+}
+
+.favBtn.active {
+  background: #1c1917;
 }
 
 .search {
@@ -463,6 +490,14 @@ footer {
   .grid { grid-template-columns: 1fr; gap: 16px; }
   .panel { max-width: 100%; }
   .content { padding: 0 16px 40px; }
+  .favBtn {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 12px auto 0;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 900px) {
